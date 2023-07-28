@@ -1,0 +1,11 @@
+<mat-form-field class="search">
+    <mat-label>GIFs</mat-label>
+    <input matInput type="text" value="giphy" name="gif" [(ngModel)]="giphySearch" (ngModelChange)="onSearchGif($event)"/>
+    <mat-hint>Search for your best gifs!</mat-hint>
+</mat-form-field>
+
+<mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile *ngFor="let linkGif of loadedGifs">
+        <img [src]="linkGif.images.fixed_height.url" />
+    </mat-grid-tile>
+</mat-grid-list>
