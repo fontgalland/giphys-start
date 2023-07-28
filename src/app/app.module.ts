@@ -15,6 +15,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FavoriteGifsComponent } from './favorite-gifs/favorite-gifs.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { FavoriteGifsComponent } from './favorite-gifs/favorite-gifs.component';
     MatInputModule,
     MatCardModule,
     MatTabsModule,
-    MatGridListModule
+    MatGridListModule,
+    DragDropModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

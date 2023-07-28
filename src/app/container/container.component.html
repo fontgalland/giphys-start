@@ -1,10 +1,10 @@
-<mat-card class="card">
+<mat-card class="card mat-elevation-z12" >
     <mat-tab-group>
         <mat-tab label="Search"> 
             <app-giphy-gifs></app-giphy-gifs>
         </mat-tab>
         <mat-tab label="My favorites"> 
-            <app-favorite-gifs></app-favorite-gifs>
+            <app-favorite-gifs *cdkDragPlaceholder></app-favorite-gifs>
         </mat-tab>
 
     </mat-tab-group>

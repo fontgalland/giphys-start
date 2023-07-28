@@ -11,7 +11,8 @@ export class GiphyGifsComponent {
   giphySearch:string = '';
   linkGifs:string = '';
   loadedGifs:Array<Gif> = [];
-
+  liked: boolean = false;
+  
   constructor(private giphyService: GiphyApiService) {}
 
   onSearchGif(event: string) {
