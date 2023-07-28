@@ -14,13 +14,15 @@ import { ContainerComponent } from './container/container.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FavoriteGifsComponent } from './favorite-gifs/favorite-gifs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GiphyGifsComponent,
     NavbarComponent,
-    ContainerComponent
+    ContainerComponent,
+    FavoriteGifsComponent
   ],
   imports: [
     BrowserModule,
