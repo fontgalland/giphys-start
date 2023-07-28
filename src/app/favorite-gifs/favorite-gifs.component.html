@@ -1,1 +1,8 @@
-<p>favorite-gifs works!</p>
+<mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile *ngFor="let gifs of favoriteGifs; let i = index">
+        <img [src]="gifs" cdkDrag />
+        <!-- <button class="button-like" mat-mini-fab [color]="this.loadedGifs[i].liked ? 'warn' : 'primary' " aria-label="favorite" (click)="setToFavorite(i)">
+            <mat-icon>favorite</mat-icon>
+        </button> -->
+    </mat-grid-tile>
+</mat-grid-list>

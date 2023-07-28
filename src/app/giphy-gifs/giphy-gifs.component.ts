@@ -12,8 +12,11 @@ export class GiphyGifsComponent {
   linkGifs:string = '';
   loadedGifs:Array<Gif> = [];
   liked: boolean = false;
+  favoriteGifs:Array<string> = [];
   
-  constructor(private giphyService: GiphyApiService) {}
+  constructor(private giphyService: GiphyApiService) {
+    console.log(this.favoriteGifs);
+  }
 
   onSearchGif(event: string) {
     this.giphySearch = event;
@@ -21,5 +24,12 @@ export class GiphyGifsComponent {
       this.loadedGifs = resp;
       console.log(this.loadedGifs);
     });
+  }
+
+  setToFavorite(index:number) {
+    this.loadedGifs[index].liked = !this.loadedGifs[index].liked
+    this.favoriteGifs.push(this.loadedGifs[index].images.fixed_height.url)
+    console.log(this.favoriteGifs);
+    localStorage.setItem(`gifs`, JSON.stringify(this.favoriteGifs));
   }
 }

@@ -4,9 +4,9 @@
 </mat-form-field>
 
 <mat-grid-list cols="3" rowHeight="200px">
-        <mat-grid-tile *ngFor="let linkGif of loadedGifs">
+        <mat-grid-tile *ngFor="let linkGif of loadedGifs; let i = index">
             <img [src]="linkGif.images.fixed_height.url" cdkDrag />
-            <button class="button-like" mat-mini-fab [color]="liked ? 'warn' : 'primary' " aria-label="Example icon button with a heart icon">
+            <button class="button-like" mat-mini-fab [color]="this.loadedGifs[i].liked ? 'warn' : 'primary' " aria-label="favorite" (click)="setToFavorite(i)">
                 <mat-icon>favorite</mat-icon>
             </button>
         </mat-grid-tile>

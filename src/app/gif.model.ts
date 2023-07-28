@@ -6,4 +6,5 @@ export interface Gif {
             url:string;
         }
     }
+    liked:boolean
 }
